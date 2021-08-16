@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: black;
+    max-width: 1920px;
+    width: auto;
+}
+
+.header {
+    background: #ffa500;
+    width: 100%;
+    height: 110px;
+}
+
+button {
+    list-style: none;
+    text-decoration: none;
+    background: #ffa500;
+    border: 2px solid black;
+    background: #ffa500;
+    padding: 10px;
+    color: black;
+    padding: 10px;
+    font-family: arial;
+    border-radius: 15px;
+    -moz-transition: all 0.3s 0.01s ease;
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.top_menu ul {
+    list-style: none;
+    /*убираем маркеры списка*/
+    margin: 0;
+    /*убираем отступы*/
+    padding-left: 0;
+    /*убираем отступы*/
+    display: flex;
+}
+
+.top_menu a {
+    display: block;
+    text-decoration: none;
+    /*убираем подчеркивание текста ссылок*/
+    background: #ffa500;
+    border: 2px solid black;
+    /* Параметры границы */
+    background: #ffa500;
+    /* Цвет фона */
+    padding: 10px;
+    /* Поля вокруг текста */
+    /*добавляем фон к пункту меню*/
+    color: black;
+    /*меняем цвет ссылок*/
+    padding: 10px;
+    /*добавляем отступ*/
+    font-family: arial;
+    /*меняем шрифт*/
+    border-radius: 4px;
+    /*добавляем скругление*/
+    -moz-transition: all 0.3s 0.01s ease;
+    /*делаем плавный переход*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    margin-left: 10px;
+}
+
+.top_menu a:hover {
+    background: #1C85BB;
+    /*добавляем эффект при наведении*/
+}
+
+.top_menu {
+    margin-left: 45%;
+    margin-top: -65px;
+}
+
+.logo {
+    float: right;
+    margin-top: -68px;
+}
+
+.content {
+
+    max-height: 270px;
+    width: 100%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.ads {
+    background: #ffa500;
+    height: 270px;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.container {}
+
+.kategory {
+    background: #ffa500;
+    min-height: 140px;
+    border-radius: 10px;
+}
+
+.image_product {
+    float: left;
+    /*Задаем обтекание*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 35px 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+.image_product img{
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    margin-left: 10px;
+    margin-top: 22px;
+    float: left;
+    color: aliceblue;
+}
+
+.description div {
+    margin: 10px;
+    color: green;
+}
+
+.btn-edit {
+    background: #ffa500;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.delete div{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    float: right;
+
+
+
+
+
+
+}
+.btn-success{
+    margin-right: 10px;
+   float: right;
+    border-radius: 4px;
+
+
+}

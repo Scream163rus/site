@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои заявки</title>
+    <link rel="stylesheet" href="/static/css/wares.css">
+</head>
+<body>
+ <div class="header">
+        <div class="verification">
+            <ul id="verification">
+                <li>
+                    <form action="/login">
+                        <button><span class="input">Войти</span></button>
+                    </form>
+                </li>
+                <li>
+                    <form action="/registration">
+                        <button><span class="registration">Регистрация</span></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="top_menu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+
+            </ul>
+        </div>
+        <div class="logo" ><a href="/"> <img src="/static/images/logo.png" alt="Логотип"> </a> </div>
+    </div>
+    <div class="content">
+                <div th:each="el : ${ad}" class="ads">
+                    <div class="container">
+                        <div class="image_product"> <img th:src="@{/img/{filename}(filename = ${el.filename})}"> </div>
+                        <div class="description">
+                            <div class="name-request">
+                                <h3 th:text="${el.title}"></h3> </div>
+                            <div class="category-request">
+                                <h3 th:text="${el.category}"></h3> </div>
+                            <div class="number-request">
+                                <h3 th:text="${el.numberPhone}"></h3> </div>
+                            <div class="description-request">
+                                <h3 th:text="${el.description}">Описание</h3> </div>
+                        </div>
+                    </div>
+                    <div class="btn-edit">
+                        <p>
+                            <a th:href="'/' + ${el.id} + '/edit'"> <img src="/static/images/edit-icon-new.png" width="30" height="30" alt="Пример"></a>
+                        </p>
+                    </div>
+                    <form id="delete" th:action="'/' + ${el.id} + '/remove'" method="post">
+                    <div class="delete">
+                        <button type="submit" class="btn-success">Удалить</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+</body>
+</html>

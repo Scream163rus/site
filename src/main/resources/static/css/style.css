@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.row:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.row {
+    display: inline-block;
+}
+
+* html .row {
+    height: 1%;
+}
+
+.row {
+    display: block;
+}
+
+body {
+    background: black;
+    max-width: 1920px;
+    width: auto;
+}
+
+.header {
+    background: #ffa500;
+    width: 100%;
+    height: 110px;
+}
+
+button {
+    list-style: none;
+    text-decoration: none;
+    background: #ffa500;
+    border: 2px solid black;
+    background: #ffa500;
+    padding: 10px;
+    color: black;
+    padding: 10px;
+    font-family: arial;
+    border-radius: 15px;
+    -moz-transition: all 0.3s 0.01s ease;
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+button:hover{
+    background: #1C85BB;
+}
+
+.top_menu ul {
+    list-style: none;
+    /*убираем маркеры списка*/
+    margin: 0;
+    /*убираем отступы*/
+    padding-left: 0;
+    /*убираем отступы*/
+    display: flex;
+}
+
+.top_menu a {
+    display: block;
+    text-decoration: none;
+    background: #ffa500;
+    border: 2px solid black;
+    background: #ffa500;
+    padding: 10px;
+    color: black;
+    padding: 10px;
+    font-family: arial;
+    border-radius: 4px;
+    -moz-transition: all 0.3s 0.01s ease;
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    margin-left: 10px;
+}
+
+.top_menu a:hover {
+    background: #1C85BB;
+}
+
+.top_menu {
+    margin-top: -65px;
+    margin-left: 500px;
+}
+
+.logo {
+    float: right;
+    margin-top: -68px;
+}
+
+.content {
+
+
+    max-height: 270px;
+    width: 70%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.ads {
+    margin-top: 30px;
+    background: #ffa500;
+    height: 270px;
+    border-radius: 10px;
+}
+
+.container {
+
+}
+
+.sidebar {
+    margin-top: 30px;
+    width: 30%;
+    float: left;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.kategory {
+    background: #ffa500;
+    min-height: 140px;
+    border-radius: 10px;
+}
+
+.image_product {
+    float: left;
+    /*Задаем обтекание*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 35px 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+
+}
+.image_product img{
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    margin-left: 10px;
+    margin-top: 22px;
+    float: left;
+    color: aliceblue;
+}
+
+.description div {
+    margin: 10px;
+    color: green;
+}
+
+.btn-edit {
+    background: #ffa500;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.details ul {
+    list-style: none;
+    /*убираем маркеры списка*/
+    margin: 0;
+    /*убираем отступы*/
+    padding-left: 0;
+    /*убираем отступы*/
+    display: flex;
+}
+
+.details a {
+    display: block;
+    text-decoration: none;
+    background: #ffa500;
+    border: 2px solid black;
+    background: #ffa500;
+    padding: 10px;
+    color: black;
+    font-family: arial;
+    border-radius: 4px;
+    -moz-transition: all 0.3s 0.01s ease;
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    margin-right: 10px;
+}
+
+.details a:hover {
+    background: #1C85BB;
+}
+
+.details {
+float:right;
+    position: relative;
+    top: 200px;
+
+}
+.search{
+    margin-left: 10px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+#search{
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    background: #ffa500;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+#category{
+
+    font-size: 13px;
+    padding-top: 5px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+    background: #ffa500;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.btn-search{
+    margin-top: 10px;
+}
+#btn-search{
+    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+

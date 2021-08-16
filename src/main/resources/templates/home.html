@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт техники</title>
+    <link rel="stylesheet" href="/static/css/style.css"> </head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="verification">
+                <ul id="verification">
+                    <li>
+                        <form action="/login">
+                            <button><span class="input">Войти</span></button>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="/registration">
+                            <button><span class="registration">Регистрация</span></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="top_menu">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/add">Создать заявку</a></li>
+                    <li><a th:href="'/' + ${id} + '/ad'">Мои заявки</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="/"> <img src="/static/images/logo.png" alt="Логотип"> </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content">
+                <div th:each="el : ${ad}" class="ads">
+                    <div class="container">
+                        <div  class="image_product"> <img th:src="@{/img/{filename}(filename = ${el.filename})}"> </div>
+                        <div class="description">
+                            <div class="name-request">
+                                <h3 th:text="${el.title}"/> </div>
+                            <div  class="category-request">
+                                <h3 th:text="${el.category}"/></div>
+                            <div class="number-request">
+                                <h3 th:text="${el.numberPhone}" /></div>
+                            <div class="description-request">
+                                <h3 th:text="${el.description}"/></div>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <ul>
+                            <li><a  th:href="'/' + ${el.id}" >Перейти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="kategory">
+                    <div>
+                        <form method="post" action="">
+                            <div class="search">
+                                <input type="text"placeholder="Введите название" id="search" name="searchText"> </div>
+                            <div class="category-search">
+                                <select id="category" name="Category">
+                                    <option value="" selected>Все</option>
+                                <option value="Компьютер">Компьютеры</option>
+                                <option value="Комплектующие">Комплектующие</option>
+                                <option value="Серверы">Серверы</option>
+                                <option value="Оргтехника">Оргтехника</option>
+                                <option value="Моноблоки">Моноблоки</option>
+                                <option value="Ноутбуки">Ноутбуки</option>
+                                <option value="Аудиотехника">Аудиотехника</option>
+                                <option value="Мобильные телефоны">Мобильные телефоны</option>
+                                <option value="Планшеты">Планшеты</option>
+                                <option value="Зарядные устройства">Зарядные устройства</option>
+                                <option value="Наушники">Наушники</option>
+                                <option value="Холодильники">Холодильники</option>
+                                <option value="Электрические плиты">Электрические плиты</option>
+                                <option value="Морозильные камеры">Морозильные камеры</option>
+                                <option value="Пылесосы">Пылесосы</option>
+                                <option value="Кондицмонеры">Кондиционеры</option>
+                                <option value="Микроволновки">Микроволновки</option>
+                                <option value="Стиральные машинки">Стиральные машинки</option>
+                                <option value="Посудомоечные машины">Посудомоечные машины</option>
+                                <option value="Игровые приставки">Игровые приставки</option>
+                                <option value="Телевизоры">Телевизоры</option>
+                                <option value="Спутниковое и цифровое ТВ">Спутниковое и цифровое ТВ</option>
+                                <option value="Видеотехника">Видеотехника</option>
+                                <option value="Электроинструмент">Электроинструмент</option>
+                                <option value="фотоаппараты">фотоаппараты</option>
+                                <option value="Электротранспорт">Электротранспорт</option>
+                                </select>
+                            </div>
+                        <div class="btn-search">
+                        <button id="btn-search" type="submit">Найти</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

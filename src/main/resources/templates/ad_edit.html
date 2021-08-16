@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать заявку</title>
+    <link rel="stylesheet" href="/static/css/edit-style.css"> </head>
+
+<body>
+    <div class="header">
+        <div class="verification">
+            <ul id="verification">
+                <li>
+                    <form action="/login">
+                        <button><span class="input">Войти</span></button>
+                    </form>
+                </li>
+                <li>
+                    <form action="/registration">
+                        <button><span class="registration">Регистрация</span></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="top_menu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a th:href="'/' + ${id} + '/ad'">Мои заявки</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="/"> <img src="/static/images/logo.png" alt="Логотип"> </a>
+        </div>
+    </div>
+    <div class="request">
+        <div class="container mt-5">
+            <h1>Редактировать объявление</h1>
+            <form class="description" method="post" enctype="multipart/form-data">
+                <div class="name-request">
+                    <h3 class="names">Название объявления</h3>
+                    <input id="name-request" type="text" th:value="${ad.title}" name="title" placeholder="" class="form-control"> </div>
+                <div class="name-category">
+                    <h3 class="names">Категория</h3>
+                    <div class="name-category-1">
+                            <select id="category" name="Category">
+                                <option value="Все" selected>Все</option>
+                                <option value="Компьютер">Компьютеры</option>
+                                <option value="Комплектующие">Комплектующие</option>
+                                <option value="Серверы">Серверы</option>
+                                <option value="Оргтехника">Оргтехника</option>
+                                <option value="Моноблоки">Моноблоки</option>
+                                <option value="Ноутбуки">Ноутбуки</option>
+                                <option value="Аудиотехника">Аудиотехника</option>
+                                <option value="Мобильные телефоны">Мобильные телефоны</option>
+                                <option value="Планшеты">Планшеты</option>
+                                <option value="Зарядные устройства">Зарядные устройства</option>
+                                <option value="Наушники">Наушники</option>
+                                <option value="Холодильники">Холодильники</option>
+                                <option value="Электрические плиты">Электрические плиты</option>
+                                <option value="Морозильные камеры">Морозильные камеры</option>
+                                <option value="Пылесосы">Пылесосы</option>
+                                <option value="Кондицмонеры">Кондиционеры</option>
+                                <option value="Микроволновки">Микроволновки</option>
+                                <option value="Стиральные машинки">Стиральные машинки</option>
+                                <option value="Посудомоечные машины">Посудомоечные машины</option>
+                                <option value="Игровые приставки">Игровые приставки</option>
+                                <option value="Телевизоры">Телевизоры</option>
+                                <option value="Спутниковое и цифровое ТВ">Спутниковое и цифровое ТВ</option>
+                                <option value="Видеотехника">Видеотехника</option>
+                                <option value="Электроинструмент">Электроинструмент</option>
+                                <option value="фотоаппараты">фотоаппараты</option>
+                                <option value="Электротранспорт">Электротранспорт</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="name-description">
+                    <h3 class="names">Описание</h3>
+                    <textarea id="names" name="description" placeholder="" th:text="${ad.description}" class="form-control" cols="60" rows="5"></textarea>
+                </div>
+                <div class="number-phone">
+                    <h3 class="names">Номер телефона</h3>
+                    <input id="number" type="text" name="numberPhone" th:value="${ad.numberPhone}" placeholder="" class="form-control"> </div>
+            <div class="image-download">
+                <input id="image" type="file" name="file"> </div>
+            <button type="submit" class="btn-success">Изменить </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/details.css"> </head>
+
+<body>
+    <div class="header">
+        <div class="verification">
+            <ul id="verification">
+                <li>
+                    <form action="/login">
+                        <button><span class="input">Войти</span></button>
+                    </form>
+                </li>
+                <li>
+                    <form action="/registration">
+                        <button><span class="registration">Регистрация</span></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="top_menu">
+            <ul>
+                <li><a href="/">Главная</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="/"> <img src="/static/images/logo.png" alt="Логотип"> </a>
+        </div>
+    </div>
+    <div class="request">
+        <div  class="container">
+            <h1 th:text="${ad.title}"></h1>
+            <div class="request_details">
+                <div class="image_product"> <img th:src="@{/img/{filename}(filename = ${ad.filename})}"> </div>
+                <div class="description">
+                    <div class="category-request">
+                        <h3 th:text="${ad.category}"></h3> </div>
+                    <div class="number-request">
+                        <h3 th:text="${ad.numberPhone}"></h3> </div>
+                    <div class="description-request">
+                        <h3 th:text="${ad.description}"></h3> </div>
+                </div>
+            </div>
+            <br>
+            <h3 th:text="'Автор: ' + ${ad.getAuthorName()}" class="user">Пользователь</h3>
+            <div class="date">
+                <h3 th:text="'Дата: ' + ${ad.getDate()}"></h3> </div>
+        </div>
+    </div>
+</body>
+
+</html>
