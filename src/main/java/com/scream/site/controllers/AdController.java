@@ -23,8 +23,10 @@ import java.util.UUID;
 
 @Controller
 public class AdController {
-    @Autowired
     private AdRepo adRepo;
+    public AdController(AdRepo adRepo){
+        this.adRepo = adRepo;
+    }
     @Value("${upload.path}")
     private String uploadPath;
     @GetMapping("/add")

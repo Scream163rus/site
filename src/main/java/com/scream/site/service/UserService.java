@@ -15,11 +15,11 @@ import java.util.Collections;
 @Service
 public class UserService implements UserDetailsService {
     private UserRepo userRepo;
-    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    UserService(UserRepo userRepo){
+    UserService(UserRepo userRepo, BCryptPasswordEncoder bCryptPasswordEncoder){
         this.userRepo = userRepo;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     @Override
